@@ -13,56 +13,39 @@
 
 int _printf(const char *format, ...)
 {
-va_list args;
-int count = 0;
+va_list ap;
+int (*f)(va_list);
+unsigned int i = 0, cprint = 0;
 
-va_start(args, format);
-
-while (*format)
+if (format == NULL)
+return (-1);
+va_start(ap, format);
+while (format[i])
 {
-if (*format == '%')
+while (format[i] != '%' && format[i])
 {
-format++;
-
-switch (*format)
-{
-case 'c':
-{
-char c = (char)va_arg(args, int);
-putchar(c);
-count++;
-break;
+_putchar(format[i]);
+cprint++;
+i++;
 }
-case 's':
+if (format[i] == '\0')
+return (cprint);
+f = find_function(&format[i + 1]);
+if (f != NULL)
 {
-const char *str = va_arg(args, const char *);
-while (*str)
-{
-putchar(*str++);
-count++;
+cprint += f(ap);
+i += 2;
+continue;
 }
-break;
-}
-case '%':
-{
-putchar('%');
-count++;
-break;
-}
-default:
-return -1;
-}
-}
+if (!format[i + 1])
+return (-1);
+_putchar(format[i]);
+cprint++;
+if (format[i + 1] == '%')
+i += 2;
 else
-{
-putchar(*format);
-count++;
+i++;
 }
-
-format++;
-}
-
-va_end(args);
-
-return count;
+va_end(ap);
+return (cprint);
 }
