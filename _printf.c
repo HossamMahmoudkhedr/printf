@@ -11,9 +11,6 @@
  * Return: the number of characters printed
  */
 
-#include <stdio.h>
-#include <stdarg.h>
-
 int _printf(const char *format, ...)
 {
 va_list args;
