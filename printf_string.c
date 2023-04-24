@@ -3,7 +3,7 @@
 #include <stdarg.h>
 #include "main.h"
 
-int print_string(va_list s)
+int printf_string(va_list s)
 {
 char *my_string;
 

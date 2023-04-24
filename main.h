@@ -2,9 +2,9 @@
 #define _PRINTF_H
 
 int _printf(const char *format, ...);
-int print_char(va_list c);
+int printf_char(va_list c);
 int print_percentage(void);
-int print_string(va_list s);
+int printf_string(va_list s);
 
 typedef struct code_format
 {

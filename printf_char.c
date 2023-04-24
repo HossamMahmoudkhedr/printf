@@ -10,7 +10,7 @@
  * Return: 1
  */
 
-int print_char(va_list c)
+int printf_char(va_list c)
 {
 unsigned int my_char;
 my_char = va_arg(c, int);
