@@ -6,6 +6,7 @@ int printf_char(va_list c);
 int print_percentage(void);
 int printf_string(va_list s);
 int printf_int(va_list i);
+int printf_dec(va_list d);
 
 typedef struct code_format
 {
