@@ -14,6 +14,8 @@ unsigned int i = 0;
 code_f find_f[] = {
 {"c", printf_char},
 {"s", printf_string},
+{"i", printf_int},
+{"d", printf_dec},
 {NULL, NULL}};
 
 while (find_f[i].sc)
@@ -26,6 +28,7 @@ i++;
 }
 return (NULL);
 }
+
 /**
 * _printf - function that produces output according to a format.
 * @format: format (char, string, int, decimal)

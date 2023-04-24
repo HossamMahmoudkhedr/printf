@@ -5,6 +5,7 @@ int _printf(const char *format, ...);
 int printf_char(va_list c);
 int print_percentage(void);
 int printf_string(va_list s);
+int printf_int(va_list i);
 
 typedef struct code_format
 {
