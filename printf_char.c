@@ -4,13 +4,13 @@
 #include "main.h"
 
 /**
- * printf_char - prints a character
+ * print_char - prints a character
  *
  * @c: the character to be printed
  * Return: 1
  */
 
-int printf_char(va_list c)
+int print_char(va_list c)
 {
 unsigned int my_char;
 my_char = va_arg(c, int);

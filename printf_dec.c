@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * printf_dec - function that prints an decimal
+ * print_dec - function that prints an decimal
  * @d: integer to print
  * Descriptions: prints digit with _putchar
  * Return: size the output text
