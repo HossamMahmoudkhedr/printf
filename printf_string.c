@@ -2,7 +2,12 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include "main.h"
-
+/**
+ * printf_string - prints a string
+ *
+ * @s: the string to be printed
+ * Return: the length of the string
+ */
 int printf_string(va_list s)
 {
 char *my_string;
