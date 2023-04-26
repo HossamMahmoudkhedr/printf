@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
 #include "main.h"
 /**
  * print_int - function that prints an integer
