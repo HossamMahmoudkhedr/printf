@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 /**
- * print_string - Prints a string
+ * print_string - Prints the passed string
  *
  * @s: The string to be printed
  *
