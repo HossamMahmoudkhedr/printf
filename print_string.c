@@ -4,11 +4,11 @@
 #include <stdlib.h>
 
 /**
- * print_string - Prints the passed string
+ * print_string - Prints the passed string.
  *
- * @s: The string to be printed
+ * @s: The string to be printed.
  *
- * Return: The length of the string
+ * Return: The length of the string.
  */
 int print_string(va_list s)
 {

@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 /**
- * print_char - Prints the passed character to the function
+ * print_char - Prints the passed character.
  *
  * @c: The character to be printed.
  *
