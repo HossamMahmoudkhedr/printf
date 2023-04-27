@@ -1,7 +1,10 @@
-#include <stdarg.h>
 #ifndef _PRINTF_H
 #define _PRINTF_H
 
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 typedef struct code_format
 {
