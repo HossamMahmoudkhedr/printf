@@ -31,10 +31,12 @@ return (NULL);
 }
 
 /**
-* _printf - function that produces output according to a format.
-* @format: format (char, string, int, decimal)
-* Return: size the output text
-*/
+ * _printf - function that produces output according to a format.
+ *
+ *@format: format (char, string, int, decimal)
+ * Return: size the output text
+ */
+
 int _printf(const char *format, ...)
 {
 va_list ap;

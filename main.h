@@ -15,4 +15,5 @@ int print_percentage(void);
 int print_string(va_list s);
 int print_dec(va_list d);
 int print_int(va_list i);
+int (*find_function(const char *format))(va_list);
 #endif /* _PRINTF_H */
