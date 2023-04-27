@@ -4,11 +4,11 @@
 #include <stdlib.h>
 
 /**
- * print_string - Prints a string.
+ * print_string - Prints a string
  *
- * @s: The string to be printed.
+ * @s: The string to be printed
  *
- * Return: The length of the string.
+ * Return: The length of the string
  */
 int print_string(va_list s)
 {
@@ -17,7 +17,9 @@ int i = 0;
 
 my_string = va_arg(s, char *);
 if (my_string == NULL)
+{
 my_string = "(null)";
+}
 
 while (my_string[i])
 {
