@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-#include <varargs.h>
 #include "main.h"
 /**
  * find_function - function that finds formats for _printf
