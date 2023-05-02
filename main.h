@@ -1,22 +1,35 @@
-#ifndef _PRINTF_H
-#define _PRINTF_H
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
 #include <stdarg.h>
-#include <stdio.h>
+#include <unistd.h>
 #include <stdlib.h>
-#include <string.h>
 
-typedef struct code_format
+/**
+ * struct print - struct for printer functions
+ * @type_arg: identifier
+ * @f: pointer to a printer functions
+ *
+ * Description: struct that stores pointers to a
+ * printer functions.
+ */
+typedef struct print
 {
-char *sc;
-int (*f)(va_list);
-} code_f;
+	char *type_arg;
+	int (*f)(va_list, char *, unsigned int);
+} print_t;
 
 int _printf(const char *format, ...);
-int print_char(va_list c);
-int print_percentage(void);
-int print_string(va_list s);
-int print_dec(va_list d);
-int print_int(va_list i);
-int (*find_function(const char *format))(va_list);
-#endif /* _PRINTF_H */
+int print_prg(va_list __attribute__((unused)), char *, unsigned int);
+int print_chr(va_list arguments, char *buf, unsigned int ibuf);
+int print_str(va_list arguments, char *buf, unsigned int ibuf);
+int print_int(va_list arguments, char *buf, unsigned int ibuf);
+int print_bnr(va_list arguments, char *buf, unsigned int ibuf);
+int print_unt(va_list arguments, char *buf, unsigned int ibuf);
+int print_oct(va_list arguments, char *buf, unsigned int ibuf);
+int print_hex(va_list arguments, char *buf, unsigned int ibuf);
+int print_upx(va_list arguments, char *buf, unsigned int ibuf);
+int print_usr(va_list arguments, char *buf, unsigned int ibuf);
+int print_add(va_list arguments, char *buf, unsigned int ibuf);
+int print_rev(va_list arguments, char *buf, unsigned int ibuf);
+int print_rot(va_list arguments, char *buf, unsigned int ibuf);
